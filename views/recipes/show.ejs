@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Recipe</title>
+  </head>
+  <body>
+    <h3>Name: <%= recipe.name %></h3>
+    <p>Instructions: <%= recipe.instructions %></p>
+    <p>Ingredients: <%= recipe.ingredients %></p>
+    <br />
+    <br />
+    <a href="<%= recipe._id %>/edit">Edit</a> <br /><br />
+
+    <form action="/recipes/<%=recipe._id%>?_method=DELETE" method="POST">
+      <button type="submit">Delete</button>
+    </form>
+  </body>
+</html>
